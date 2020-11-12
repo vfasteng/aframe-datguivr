@@ -2,52 +2,15 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>A-Frame GLTF Exporter Component - Basic</title>
-    <meta name="description" content="Basic example for GLTF Exporter component."></meta>
+    <title>A-Frame datguivr Component - example</title>
+    <meta name="description" content="Basic example for datguivr component."></meta>
     <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
     <script src="aframe-master.min.js"></script>
-    <script src="aframe-gltf-exporter-component.min.js"></script>
-    <style>
-    .button:hover {
-      background-color: #fff;
-      color: blue;
-    }
-    .button {
-      background-color: blue;
-      border-radius: 8px;
-      border: none;
-      color: #fff;
-      cursor: pointer;
-      display: inline-block;
-      font-size: 12px;
-      height: 34px;
-      margin-top: 5px;
-      margin-left: 5px;
-      outline: none;
-      position: relative;
-      width: 190px;
-      z-index: 999;
-    }
-
-    #container {
-      position: absolute;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-  </style>
+    <script src="aframe-datguivr.js"></script>
+    
   </head>
   <body>
-    <div id="container">
-        <button id="load-model" class="button"><span>Load</span></button>
-        <button id="position-it" class="button"><span>Position</span></button>
-        <button id="set-limits" class="button"><span>Limits</span></button>
-        <button id="export-scene" class="button"><span>Export GLTF</span></button>
-        <button id="export-scene-bin" class="button"><span>Binary</span></button>
-      
-
-        </div>
-    <a-scene gltf-exporter>
+    <a-scene>
       <a-assets>
         <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg" crossorigin>
         <img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg" crossorigin>
@@ -58,7 +21,7 @@
 
       </a-assets>
       
-      <a-entity>
+      <a-entity aframe-datguivr>
         <a-datgui name="settings" position="0 2 -1">
           <a-gui-slider id="scaleControl" name="scale" step="0.01" min="0.01" max="4"></a-gui-slider>
           <a-gui-dropdown name="options">
